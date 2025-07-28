@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 import { Search, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Home() {
-  const [images, setImages] = useState<any>([]);
-  const [filteredImages, setFilteredImages] = useState<any>([]);
-  const [searchTerm, setSearchTerm] = useState<any>('');
-  const [selectedImage, setSelectedImage] = useState<any>(null);
+  const [images, setImages] = useState([]);
+  const [filteredImages, setFilteredImages] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const imageFiles = [
     '24.jpeg',
@@ -57,7 +57,7 @@ export default function Home() {
 
   useEffect(() => {
     // Filter images based on search term
-    const filtered = images.filter((image : any) =>
+    const filtered = images.filter((image) =>
       image.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredImages(filtered);
@@ -125,7 +125,7 @@ export default function Home() {
 
         {/* Image Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-          {filteredImages.map((image : any) => (
+          {filteredImages.map((image) => (
             <div
               key={image.id}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
