@@ -155,7 +155,7 @@ export default function Home() {
       {/* Image Modal */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
-          <div className="relative max-w-4xl max-h-[90vh] w-full">
+          <div className="relative max-w-4xl max-h-[90vh]">
             <button
               onClick={() => setSelectedImage(null)}
               className="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl z-10 bg-black/20 rounded-full w-10 h-10 flex items-center justify-center"
@@ -165,7 +165,7 @@ export default function Home() {
             <img
               src={selectedImage.src}
               alt={selectedImage.name}
-              className="w-full h-full object-contain rounded-lg"
+              className="w-full h-175 object-contain rounded-lg"
             />
           </div>
         </div>
